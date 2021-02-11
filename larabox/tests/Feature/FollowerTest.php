@@ -6,24 +6,24 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class FollowerTest extends TestCase
+class BookTest extends TestCase
 {
     /**
      * A basic feature test example.
      *
      * @return void
      */
-    public function testFindFollowers()
+    public function testFindBook()
     {
-        $response = $this->get('/followers');
+        $response = $this->get('/books');
 
         $response
             ->assertStatus(200)
             ->assertExactJson([
-                'followers' => [
-                    ['id' => '1', 'name' => 'aaa'],
-                    ['id' => '2', 'name' => 'bbb'],
-                    ['id' => '3', 'name' => 'bbb'],
+                'books' => [
+                    ['id' => '1', 'title' => 'aaa'],
+                    ['id' => '2', 'title' => 'bbb'],
+                    ['id' => '3', 'title' => 'bbb'],
                 ]
             ]);
     }
