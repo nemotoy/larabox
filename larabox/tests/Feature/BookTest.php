@@ -15,7 +15,7 @@ class BookTest extends TestCase
      */
     public function testFindBook()
     {
-        $response = $this->get('/books');
+        $response = $this->get('/book/lists');
 
         $response
             ->assertStatus(200)
