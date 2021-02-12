@@ -16,12 +16,7 @@ class BookTest extends TestCase
      */
     public function testFindBooks()
     {
-        $name = Config::get('app.url');
-        echo $name;
-        // ローカルホストは取れている
-
-        // $url = route('/book/lists');
-        $response = $this->get('/book/lists');
+        $response = $this->get('api/book/lists');
 
         $response
             ->assertStatus(200)
