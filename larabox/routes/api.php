@@ -17,6 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 Route::get('/book/lists', function (Request $request) {
-    return $request->user();
+    return response()->json([
+        'books' => [
+            ['id' => '1', 'title' => 'aaa'],
+            ['id' => '2', 'title' => 'bbb'],
+            ['id' => '3', 'title' => 'bbb'],
+        ]
+        ], 200);
 });
