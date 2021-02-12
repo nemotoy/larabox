@@ -23,7 +23,6 @@ class BookFactory extends Factory
     {
         return [
             'id' => 1,
-            'title' => 'aaa',
         ];
     }
 }
