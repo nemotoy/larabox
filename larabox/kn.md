@@ -6,6 +6,7 @@
 - factory in dataprovider
 - comment
 - mocking db facade
+- cors
 
 ## PHP Unit
 
@@ -15,3 +16,7 @@
 ## Exception
 
 - http://blog.tojiru.net/article/455279557.html
+
+## CORS
+
+- https://github.com/fruitcake/laravel-cors
