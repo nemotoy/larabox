@@ -22,7 +22,8 @@ class BookFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'id' => 1,
+            'title' => 'aaa',
         ];
     }
 }
