@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Support\Facades\Config;
 
 class BookTest extends TestCase
 {
@@ -13,8 +14,13 @@ class BookTest extends TestCase
      *
      * @return void
      */
-    public function testFindBook()
+    public function testFindBooks()
     {
+        $name = Config::get('app.url');
+        echo $name;
+        // ローカルホストは取れている
+
+        // $url = route('/book/lists');
         $response = $this->get('/book/lists');
 
         $response
