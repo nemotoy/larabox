@@ -28,3 +28,15 @@
 ## CORS
 
 - https://github.com/fruitcake/laravel-cors
+
+## Architecture
+
+- route
+  - middleware
+- controller
+  - formrequest
+- service
+  - eloquent
+    - model
+    - trait
+- exception
