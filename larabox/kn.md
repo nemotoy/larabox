@@ -17,6 +17,10 @@
 - https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers
 - https://qiita.com/Hiraku/items/5c49987f4e9e167dad86
 
+### テストタブル
+
+- https://phpunit.readthedocs.io/ja/latest/test-doubles.html#test-doubles-mock-objects
+
 ## Exception
 
 - http://blog.tojiru.net/article/455279557.html
