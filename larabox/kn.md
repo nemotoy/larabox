@@ -1,13 +1,20 @@
 # kn
 
-- php artisan route:list 
-- DB testing
-- mfsc
-- factory in dataprovider
-- comment
-- mocking db facade
-- cors
-- php artisan test vs phpunit
+- PHP
+  - comment
+  - composer
+- laravel
+  - cli
+    - php artisan route:list 
+    - mfsc
+  - testing
+    - php artisan test vs phpunit
+    - DB testing
+    - mocking db facade
+    - factory in dataprovider
+  - cors
+  - exception
+  - CI/CD
 
 ## PHP Unit
 
@@ -16,10 +23,21 @@
 - https://phpunit.readthedocs.io/ja/latest/index.html
 - https://phpunit.readthedocs.io/ja/latest/writing-tests-for-phpunit.html#writing-tests-for-phpunit-data-providers
 - https://qiita.com/Hiraku/items/5c49987f4e9e167dad86
+- https://readouble.com/mockery/1.0/ja/index.html
 
 ### テストタブル
 
 - https://phpunit.readthedocs.io/ja/latest/test-doubles.html#test-doubles-mock-objects
+
+### php artisan test vs phpunit
+
+```sh
+# php artisan
+$ php artisan test
+
+# phpunit
+$ ./vendor/bin/phpunit ./tests
+```
 
 ## Exception
 
@@ -40,3 +58,9 @@
     - model
     - trait
 - exception
+
+## Composer
+
+PHPのパッケージ管理。 *scripts*でPHPのタスク管理も可能。
+
+- https://getcomposer.org/
