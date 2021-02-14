@@ -15,6 +15,9 @@
   - cors
   - exception
   - CI/CD
+  - serialize
+  - mail
+  - ORM(Eloquent)
 
 ## PHP Unit
 
