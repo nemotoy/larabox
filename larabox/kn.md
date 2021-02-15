@@ -18,6 +18,7 @@
   - serialize
   - mail
   - ORM(Eloquent)
+    - Scope
 
 ## PHP Unit
 
@@ -67,3 +68,11 @@ $ ./vendor/bin/phpunit ./tests
 PHPのパッケージ管理。 *scripts*でPHPのタスク管理も可能。
 
 - https://getcomposer.org/
+
+## ORM
+
+### スコープ
+
+Eloquent(モデル)に対して実行されるクエリに対して共通的な条件を加えたい。
+
+- https://readouble.com/laravel/8.x/ja/eloquent.html
