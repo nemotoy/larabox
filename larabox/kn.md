@@ -19,6 +19,8 @@
   - mail
   - ORM(Eloquent)
     - Scope
+  - formRequest + validator
+    - 動的項目
 
 ## PHP Unit
 
