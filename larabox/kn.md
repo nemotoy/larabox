@@ -21,6 +21,13 @@
     - Scope
   - formRequest + validator
     - 動的項目
+  - validation rules
+
+## PHP/Laravel
+
+- https://laravel.com/api/8.x/index.html
+
+--
 
 ## PHP Unit
 
@@ -78,3 +85,8 @@ PHPのパッケージ管理。 *scripts*でPHPのタスク管理も可能。
 Eloquent(モデル)に対して実行されるクエリに対して共通的な条件を加えたい。
 
 - https://readouble.com/laravel/8.x/ja/eloquent.html
+
+## validation rules
+
+- https://readouble.com/laravel/8.x/ja/validation.html#available-validation-rules
+- https://qiita.com/kd9951/items/abd063828e33a61c8c58
