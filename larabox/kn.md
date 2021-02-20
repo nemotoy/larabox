@@ -12,6 +12,7 @@
     - DB testing
     - mocking db facade
     - factory in dataprovider
+    - coverage
   - cors
   - exception
   - CI/CD
@@ -87,6 +88,12 @@ Eloquent(モデル)に対して実行されるクエリに対して共通的な�
 - https://readouble.com/laravel/8.x/ja/eloquent.html
 
 ## validation rules
+
+- in: 対象リストに含まれているか
+- exists: テーブルに属性値を持つレコードを含まれているか
+- size: 同サイズ
+
+### 参考
 
 - https://readouble.com/laravel/8.x/ja/validation.html#available-validation-rules
 - https://qiita.com/kd9951/items/abd063828e33a61c8c58
