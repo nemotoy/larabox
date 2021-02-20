@@ -21,12 +21,11 @@ class ExampleTest extends TestCase
         $request = new ExampleRequest();
         $rules = $request->rules();
         $messages = $request->messages();
-        dump($rules, $messages);
         $validator = Validator::make($inData, $rules, $messages);
         $result = $validator->fails();
         $this->assertEquals($outFail, $result);
         $messages = $validator->errors()->getMessages();
-        $this->assertEquals($outMessage, $messages);
+        $this->assertEquals(json_encode($outMessage), json_encode($messages));
     }
 
     public function validationProvider()
@@ -40,6 +39,15 @@ class ExampleTest extends TestCase
                 ],
                 false,
                 [],
+            ],
+            'empty all fields' => [
+                [],
+                true,
+                [
+                    'id' => ['The id field is required.'],
+                    'name' => ['The name field is required.'],
+                    'email' => ['The email field is required.'],
+                ],
             ],
         ];
     }
