@@ -11,8 +11,16 @@ use App\Http\Requests\ExampleRequest;
 class ExampleTest extends TestCase
 {
     /**
-     * A basic feature test example.
+     * FormRequestクラスのテスト
+     * https://readouble.com/laravel/8.x/ja/validation.html#form-request-validation
+     * - バリデーション
+     * - メッセージ
      *
+     * テスト方法
+     * - FromRequestを継承したクラスのインスタンスを生成し、バリデーションルールとメッセージを取得する。
+     * - Validatorインスタンスを作成する。上で取得した値とテストしたいデータを渡す。
+     * - Validatorインスタンスを実行し、その結果を評価する。
+     * 
      * @dataProvider validationProvider
      * @return void
      */
@@ -25,9 +33,15 @@ class ExampleTest extends TestCase
         $result = $validator->fails();
         $this->assertEquals($outFail, $result);
         $messages = $validator->errors()->getMessages();
-        $this->assertEquals(json_encode($outMessage), json_encode($messages));
+        $this->assertEquals(json_encode($outMessage), json_encode($messages)); // todo: 単純な配列の比較の場合失敗時に詳細結果を表示されないため、エンコーディングする。
     }
 
+    /**
+     * ExampleRequestクラステスト用のバリデーションプロバイダ
+     * - テストケース名を追加し、データセット毎に識別できるようにする
+     * - メッセージはresources/lang/en/validation.phpから。
+     * @return array
+     */
     public function validationProvider()
     {
         return [
