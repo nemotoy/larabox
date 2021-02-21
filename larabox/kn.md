@@ -20,6 +20,7 @@
   - mail
   - ORM(Eloquent)
     - Scope
+    - Seed, Factory
   - formRequest + validator
     - 動的項目
   - validation rules
@@ -81,11 +82,27 @@ PHPのパッケージ管理。 *scripts*でPHPのタスク管理も可能。
 
 ## ORM
 
-### スコープ
+### Scope
 
 Eloquent(モデル)に対して実行されるクエリに対して共通的な条件を加えたい。
 
 - https://readouble.com/laravel/8.x/ja/eloquent.html
+
+### Seed, Factory
+
+hasManyの関係で、多のレコードは任意のカラムの値をそれぞれ変えたい。
+
+```php
+ModelA::factory()
+  ->has(
+      ModelB::factory()
+      ->count(5)
+      ->state(new Sequence(
+          [ 'column' => 'a'],
+      ))
+  )
+  ->create();
+```
 
 ## validation rules
 
