@@ -91,6 +91,7 @@ Eloquent(モデル)に対して実行されるクエリに対して共通的な�
 ### Seed, Factory
 
 hasManyの関係で、多のレコードは任意のカラムの値をそれぞれ変えたい。
+A:B=1:多
 
 ```php
 ModelA::factory()
@@ -99,9 +100,16 @@ ModelA::factory()
       ->count(5)
       ->state(new Sequence(
           [ 'column' => 'a'],
-      ))
+      ),
+      'own_method')
   )
   ->create();
+
+public function own_method()
+{
+  $this->hasMany(ModelB::class, '<relation_column>');
+}
+
 ```
 
 ## validation rules
