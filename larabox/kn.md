@@ -24,6 +24,8 @@
   - formRequest + validator
     - 動的項目
   - validation rules
+  - validation
+    - dynamic field
 
 ## PHP/Laravel
 
@@ -112,13 +114,27 @@ public function own_method()
 
 ```
 
-## validation rules
+## validation
+
+### rules
 
 - in: 対象リストに含まれているか
 - exists: テーブルに属性値を持つレコードを含まれているか
 - size: 同サイズ
 
-### 参考
+#### 参考
 
 - https://readouble.com/laravel/8.x/ja/validation.html#available-validation-rules
 - https://qiita.com/kd9951/items/abd063828e33a61c8c58
+
+### dynamic field
+
+- roles()内にロジックを追加する
+- ワイルドカード指定(配列指定)する
+- withValidator()でバリデータをフックする
+
+#### 参考
+
+- https://laracasts.com/discuss/channels/laravel/validate-dynamic-fields-with-fromrequest-in-laravel
+- https://readouble.com/laravel/8.x/ja/validation.html#adding-after-hooks-to-form-requests
+- https://readouble.com/laravel/8.x/ja/validation.html#validating-arrays
