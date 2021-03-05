@@ -79,6 +79,18 @@ class ExampleTest extends TestCase
                     'object_type' => ["The selected object type is invalid."]
                 ],
             ],
+            'aid is not found' => [
+                [
+                    'id' => 1,
+                    'name' => 'aaa',
+                    'email' => 'aaaa@example.com',
+                    'object_type' => 'typea',
+                ],
+                true,
+                [
+                    'aid' => ["The aid field is required when object type is typea."]
+                ],
+            ],
         ];
     }
 }
