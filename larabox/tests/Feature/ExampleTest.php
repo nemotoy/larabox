@@ -50,6 +50,8 @@ class ExampleTest extends TestCase
                     'id' => 1,
                     'name' => 'aaa',
                     'email' => 'aaaa@example.com',
+                    'object_type' => 'typea',
+                    'aid' => 1,
                 ],
                 false,
                 [],
@@ -61,6 +63,20 @@ class ExampleTest extends TestCase
                     'id' => ['The id field is required.'],
                     'name' => ['The name field is required.'],
                     'email' => ['The email field is required.'],
+                    'object_type' => ["The object type field is required."]
+                ],
+            ],
+            'object_type does not exist' => [
+                [
+                    'id' => 1,
+                    'name' => 'aaa',
+                    'email' => 'aaaa@example.com',
+                    'object_type' => 'invalid',
+                    'aid' => 100,
+                ],
+                true,
+                [
+                    'object_type' => ["The selected object type is invalid."]
                 ],
             ],
         ];

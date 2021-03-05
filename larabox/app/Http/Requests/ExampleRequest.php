@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ExampleRequest extends FormRequest
 {
@@ -26,7 +27,9 @@ class ExampleRequest extends FormRequest
         return [
             'id' => 'required',
             'name' => 'required',
-            'email' => 'required'
+            'email' => 'required',
+            'object_type' => ['required', Rule::in(['typea', 'typeb'])],
+            'aid' => 'required_if:object_type,typea'
         ];
     }
 }
